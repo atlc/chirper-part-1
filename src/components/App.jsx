@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import HelloButton from './HelloButton';
-import Columns, { Column } from 'react-bulma-components';
-import 'react-bulma-components/dist/react-bulma-components.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import TopPanel from './TopPanel';
 
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <Columns>
-                    <Column>
-                        <HelloButton />
-                    </Column>
-                </Columns>
-            </div>
+            <Container>
+                <TopPanel />
+            </Container>
         );
     }
 }
