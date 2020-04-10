@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
+import '../styles/helpers.css';
+
 
 class TopPanel extends Component {
     constructor(props) {
@@ -56,7 +58,7 @@ class TopPanel extends Component {
 
     render() {
         return (
-            <Row style={{marginTop: 10+'px'}} className="justify-content-end">
+            <Row className="justify-content-end margin-top-10 margin-bot-10">
                 <Col md={2}><Button onClick={() => this.handleLoginLogout()} className="badge-pill" variant="outline-info">{this.state.buttonOneText}</Button></Col>
                 <Col md={2}><Button onClick={() => this.handleSignupDelete()} className="badge-pill" variant="info">{this.state.buttonTwoText}</Button></Col>
             </Row>
