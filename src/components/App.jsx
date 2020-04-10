@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import TopPanel from './TopPanel';
+import LoginPanel from './LoginPanel';
 
 class App extends Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <TopPanel setUserName={this.setUserName} />
+                <LoginPanel setUserName={this.setUserName} />
             </Container>
         );
     }
