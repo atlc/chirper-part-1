@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
-import '../styles/helpers.css';
 
 class LeftSidebar extends Component {
     constructor(props) {

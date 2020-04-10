@@ -3,8 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
-import '../styles/helpers.css';
-
 
 class TopPanel extends Component {
     constructor(props) {

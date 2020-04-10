@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LeftSidebar from './LeftSidebar';
-import ChirpPane from './ChirpPane';
+import MainBody from './MainBody';
 import TrendsPane from './TrendsPane';
 import LoginPanel from './LoginPanel';
 import '../styles/helpers.css';
@@ -38,7 +38,7 @@ class App extends Component {
                         <LeftSidebar handleToggleLoginStatus={this.handleToggleLoginStatus} />
                     </Col>
                     <Col md={7} className="justify-content-md-center text-center vr-thin">
-                        <ChirpPane />
+                        <MainBody />
                     </Col>
                     <Col md={3}>
                         <TrendsPane />

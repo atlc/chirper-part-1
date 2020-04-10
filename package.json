@@ -2,6 +2,7 @@
   "name": "chirper-part-1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://atlc.github.io/chirper-part-1",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "react": "^16.13.1",
@@ -12,10 +13,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "dev": "react-scripts start",
+    "dev": "npm run start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +36,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^2.2.0",
     "terser": "^3.14.1"
   }
 }
