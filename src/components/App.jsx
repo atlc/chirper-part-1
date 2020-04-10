@@ -19,7 +19,7 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <TopPanel setUserName={this.setUserName} user={this.state.userName}/>
+                <TopPanel setUserName={this.setUserName} />
             </Container>
         );
     }
