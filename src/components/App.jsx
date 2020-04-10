@@ -7,14 +7,22 @@ import LeftSidebar from './LeftSidebar';
 import ChirpPane from './ChirpPane';
 import TrendsPane from './TrendsPane';
 import LoginPanel from './LoginPanel';
+import '../styles/helpers.css';
+
 
 class App extends Component {
     constructor(props) {
         super(props);
+        this.handleToggleLoginStatus = this.handleToggleLoginStatus.bind(this);
         this.setUserName = this.setUserName.bind(this);
         this.state = {
-            userName: null
+            userName: null,
+            isLoggedIn: false
         };
+    }
+
+    handleToggleLoginStatus() {
+        this.setState({isLoggedIn: !this.state.isLoggedIn});
     }
 
     setUserName(name) {
@@ -27,9 +35,9 @@ class App extends Component {
                 <LoginPanel setUserName={this.setUserName} />
                 <Row>
                     <Col md={2} className="justify-content-md-left">
-                        <LeftSidebar />
+                        <LeftSidebar handleToggleLoginStatus={this.handleToggleLoginStatus} />
                     </Col>
-                    <Col md={7}>
+                    <Col md={7} className="justify-content-md-center text-center vr-thin">
                         <ChirpPane />
                     </Col>
                     <Col md={3}>

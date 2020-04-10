@@ -4,9 +4,9 @@ import Button from 'react-bootstrap/Button';
 class TrendsPane extends Component {
     render() {
         return (
-            <ul className="nav flex-column children-margin-vert-10">
+            <ul className="nav flex-column children-margin-vert-10 grandchildren-width-100">
                 <li className="nav-item">
-                    <Button className="badge-pill" variant="info">$LOCALE Trendz</Button>
+                    <Button className="badge-pill" variant="info">Birmingham Trends</Button>
                 </li>
                 <li className="nav-item">
                     <Button className="badge-pill" variant="outline-info"href="https://twitter.com/home"> Home</Button>

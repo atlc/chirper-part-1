@@ -1,3 +1,22 @@
+.children-margin-vert-10 > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.children-width-100 > * {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.grandchildren-width-100 > * > * {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.hr-thin {
+    border-bottom: 3px solid rgb(37, 51, 65);
+}
+
 .margin-top-5 {
     margin-top: 5px;
 }
@@ -14,7 +33,19 @@
     margin-bottom: 10px;
 }
 
-.children-margin-vert-10 > * {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-bot-20 {
+    margin-bottom: 20px;
+}
+
+.pad-bot-10 {
+    padding-bottom: 10px;
+}
+
+.vr-thin {
+    border-left: 3px solid rgb(37, 51, 65);
+    border-right: 3px solid rgb(37, 51, 65);
 }

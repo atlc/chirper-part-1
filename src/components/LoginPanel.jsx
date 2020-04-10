@@ -48,7 +48,7 @@ class TopPanel extends Component {
                 this.setState({
                     isLoggedIn: true,
                     buttonOneText: 'Logout',
-                    buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without an account!'
+                    buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without a real account!'
                 });
             }
         } else {
@@ -58,7 +58,7 @@ class TopPanel extends Component {
 
     render() {
         return (
-            <Row className="justify-content-end margin-top-10 margin-bot-10">
+            <Row className="justify-content-end margin-top-10 margin-bot-20 hr-thin pad-bot-10">
                 <Col md={2}><Button onClick={() => this.handleLoginLogout()} className="badge-pill" variant="outline-info">{this.state.buttonOneText}</Button></Col>
                 <Col md={2}><Button onClick={() => this.handleSignupDelete()} className="badge-pill" variant="info">{this.state.buttonTwoText}</Button></Col>
             </Row>

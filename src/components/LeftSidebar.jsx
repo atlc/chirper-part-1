@@ -3,6 +3,19 @@ import Button from 'react-bootstrap/Button';
 import '../styles/helpers.css';
 
 class LeftSidebar extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            isLoggedIn: this.props.isLoggedIn
+        };
+    }
+
+    handleButtonClickLoginValidator() {
+        // TO-DO
+        // If not logged in, throw a SWAL error
+    }
+
     render() {
         return (
             <ul className="nav flex-column children-margin-vert-10">

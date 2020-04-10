@@ -5,16 +5,16 @@ class ChirpPane extends Component {
         return (
             <ul className="nav flex-column">
                 <li className="nav-item">
-                    <a className="nav-link active" href="#">CHIRP CHIRP</a>
+                    <a className="nav-link active" href="www.google.com">CHIRP CHIRP</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">CHIRP CHIRP</a>
+                    <a className="nav-link" href="www.google.com">CHIRP CHIRP</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">CHIRP CHIRP</a>
+                    <a className="nav-link" href="www.google.com">CHIRP CHIRP</a>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link disabled" href="#">CHIRP CHIRP</a>
+                    <a className="nav-link disabled" href="www.google.com">CHIRP CHIRP</a>
                 </li>
             </ul>
         );
