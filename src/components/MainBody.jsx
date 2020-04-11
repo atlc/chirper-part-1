@@ -6,14 +6,22 @@ class MainBody extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            user: this.props.user,
             isLoggedIn: this.props.isLoggedIn
         }
+    }
+
+    componentDidMount() {
+        this.setState({
+            user: this.props.user,
+            isLoggedIn: this.props.isLoggedIn
+        });
     }
 
     render() {
         return (
             <React.Fragment>
-                <CreateChirp isLoggedIn={this.state.isLoggedIn} />
+                <CreateChirp props={this.state} />
                 <ChirpPane />
             </React.Fragment>
         );

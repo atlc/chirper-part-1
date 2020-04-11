@@ -73,5 +73,5 @@
 
 textarea {
     border: none;
-    resize: none;
+    resize: none !important;
  }

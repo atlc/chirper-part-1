@@ -2,17 +2,27 @@ import React, { Component } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import '../styles/helpers.css';
+
 
 class CreateChirp extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            user: this.props.user,
             isLoggedIn: this.props.isLoggedIn
         }
     }
 
     componentDidUpdate() {
         // Add component for progress bar for character count/280
+    }
+
+    componentDidMount() {
+        this.setState({
+            user: this.props.user,
+            isLoggedIn: this.props.isLoggedIn
+        });
     }
 
     render() {
@@ -27,7 +37,7 @@ class CreateChirp extends Component {
                         <Button className="badge-pill w-100 margin-top-10" variant="info" href="https://twitter.com/compose/tweet">Chirp</Button>
                     </Col>
                     <Col>
-                        <textarea id="chirp-textarea" maxLength="280" className="opaque-white-bg pad-bot-20 text-white" rows="4" cols="50">What's happening?</textarea>
+                        <textarea id="chirp-textarea" defaultValue="What's happening{this.props.user ? ', this.props.user' : ''}?" maxLength="280" className="opaque-white-bg pad-bot-20 text-white" rows="4" cols="50"></textarea>
                     </Col>
                 </Row>
                 <Row><Col><p className="hr-thicc"></p></Col></Row>
