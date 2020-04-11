@@ -3,25 +3,10 @@ import ChirpPane from './ChirpPane';
 import CreateChirp from './CreateChirp';
 
 class MainBody extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            user: this.props.user,
-            isLoggedIn: this.props.isLoggedIn
-        }
-    }
-
-    componentDidMount() {
-        this.setState({
-            user: this.props.user,
-            isLoggedIn: this.props.isLoggedIn
-        });
-    }
-
     render() {
         return (
             <React.Fragment>
-                <CreateChirp props={this.state} />
+                <CreateChirp props={this.props} />
                 <ChirpPane />
             </React.Fragment>
         );
