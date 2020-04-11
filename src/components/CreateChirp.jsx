@@ -4,6 +4,13 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 class CreateChirp extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isLoggedIn: this.props.isLoggedIn
+        }
+    }
+
     componentDidUpdate() {
         // Add component for progress bar for character count/280
     }
@@ -12,7 +19,7 @@ class CreateChirp extends Component {
         return (
             <React.Fragment>
                 <Row>
-                    <Col><h1 className="text-left text-white hr-thin pad-bot-10">Home</h1></Col>
+                    <Col><h1 className="text-left text-white hr-thin pad-bot-10">{this.state.isLoggedIn ? 'Home' : 'Trends Around The Globe'}</h1></Col>
                 </Row>
                 <Row className="margin-top-5 margin-bot-10">
                     <Col>

@@ -13,32 +13,33 @@ import '../styles/helpers.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.handleToggleLoginStatus = this.handleToggleLoginStatus.bind(this);
-        this.setUserName = this.setUserName.bind(this);
+
+        this.isLoggedIn = React.createRef();
+        this.user = React.createRef();
         this.state = {
             userName: null,
             isLoggedIn: false
         };
     }
 
-    handleToggleLoginStatus() {
-        this.setState({isLoggedIn: !this.state.isLoggedIn});
-    }
 
-    setUserName(name) {
-        this.setState({userName: name});
+    componentDidUpdate() {
+        this.setState({
+            isLoggedIn: this.isLoggedIn.current.state.isLoggedIn,
+            userName: this.user.current.state.user
+        });
     }
 
     render() {
         return (
             <Container>
-                <LoginPanel setUserName={this.setUserName} />
+                <LoginPanel ref={this.isLoggedIn} />
                 <Row>
                     <Col md={2} className="justify-content-md-left">
-                        <LeftSidebar handleToggleLoginStatus={this.handleToggleLoginStatus} />
+                        <LeftSidebar ref={this.isLoggedIn} />
                     </Col>
                     <Col md={7} className="justify-content-md-center text-center vr-thin">
-                        <MainBody />
+                        <MainBody ref={this.isLoggedIn} />
                     </Col>
                     <Col md={3}>
                         <TrendsPane />

@@ -12,7 +12,7 @@ class TopPanel extends Component {
             isLoggedIn: false,
             buttonOneText: 'Login',
             buttonTwoText: 'Sign up',
-            user: this.props.userName
+            user: null
         }
         this.initialState = this.state;
     }
@@ -21,7 +21,6 @@ class TopPanel extends Component {
         if (!this.state.isLoggedIn) {
             this.handleLoginLogout();
         } else {
-            this.props.setUserName(null);
             this.setState(this.initialState);
         }
     }
@@ -41,7 +40,6 @@ class TopPanel extends Component {
                 }
             });
             if (name) {
-                this.props.setUserName(name);
                 this.setState({user: name});
                 this.setState({
                     isLoggedIn: true,
@@ -52,6 +50,10 @@ class TopPanel extends Component {
         } else {
             this.setState(this.initialState);
         }
+    }
+
+    componentDidUpdate() {
+        
     }
 
     render() {
