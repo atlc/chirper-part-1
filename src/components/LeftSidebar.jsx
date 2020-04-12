@@ -2,15 +2,8 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 
 class LeftSidebar extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            isLoggedIn: this.props.isLoggedIn
-        };
-    }
-
-    handleButtonClickLoginValidator() {
+    handleButtonClickLoginValidator = () => {
         // TO-DO
         // If not logged in, throw a SWAL error
     }

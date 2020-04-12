@@ -24,7 +24,7 @@ class App extends Component {
         this.initialState = this.state;
     }
 
-    async handleSignupDelete() {
+    handleSignupDelete = async () => {
         if (!this.state.isLoggedIn) {
             this.handleLoginLogout();
         } else {
@@ -32,7 +32,7 @@ class App extends Component {
         }
     }
 
-    async handleLoginLogout() {
+    handleLoginLogout = async () => {
         if (!this.state.isLoggedIn) {
             const { value: name } = await Swal.fire({
                 title: 'Input username',
@@ -63,15 +63,15 @@ class App extends Component {
         return (
             <Container>
                 <Row className="justify-content-end margin-top-10 margin-bot-20 hr-thin pad-bot-10">
-                    <Col md={2}><Button onClick={() => this.handleLoginLogout()} className="badge-pill" variant="outline-info">{this.state.buttonOneText}</Button></Col>
-                    <Col md={2}><Button onClick={() => this.handleSignupDelete()} className="badge-pill" variant="info">{this.state.buttonTwoText}</Button></Col>
+                    <Col md={2}><Button onClick={this.handleLoginLogout} className="badge-pill" variant="outline-info">{this.state.buttonOneText}</Button></Col>
+                    <Col md={2}><Button onClick={this.handleSignupDelete} className="badge-pill" variant="info">{this.state.buttonTwoText}</Button></Col>
                 </Row>
                 <Row>
                     <Col md={2} className="justify-content-md-left">
-                        <LeftSidebar appProps={this.state} />
+                        <LeftSidebar App={this.state} />
                     </Col>
                     <Col md={7} className="justify-content-md-center text-center vr-thin">
-                        <MainBody appProps={this.state} />
+                        <MainBody App={this.state} />
                     </Col>
                     <Col md={3}>
                         <TrendsPane />
