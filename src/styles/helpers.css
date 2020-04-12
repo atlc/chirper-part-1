@@ -20,11 +20,15 @@
 }
 
 .hr-thin {
-    border-bottom: 3px solid rgb(37, 51, 65);
+    border-bottom: 3px solid rgb(37, 51, 65) !important;
 }
 
 .hr-thicc {
-    border-bottom: 8px solid rgb(37, 51, 65);
+    border-bottom: 8px solid rgb(37, 51, 65) !important;
+}
+
+.img-round {
+    border-radius: 50% !important;
 }
 
 .margin-top-5 {
@@ -52,7 +56,7 @@
 }
 
 .opaque-white-bg {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05) !important;
 }
 
 .pad-bot-10 {
@@ -60,12 +64,12 @@
 }
 
 .transparent-bg {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0,0,0,0) !important;
 }
 
 .vr-thin {
-    border-left: 3px solid rgb(37, 51, 65);
-    border-right: 3px solid rgb(37, 51, 65);
+    border-left: 3px solid rgb(37, 51, 65) !important;
+    border-right: 3px solid rgb(37, 51, 65) !important;
 }
 
 

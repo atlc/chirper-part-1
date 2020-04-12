@@ -62,9 +62,9 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <Row className="justify-content-end margin-top-10 margin-bot-20 hr-thin pad-bot-10">
-                    <Col md={2}><Button onClick={this.handleLoginLogout} className="badge-pill" variant="outline-info">{this.state.buttonOneText}</Button></Col>
-                    <Col md={2}><Button onClick={this.handleSignupDelete} className="badge-pill" variant="info">{this.state.buttonTwoText}</Button></Col>
+                <Row className="justify-content-end margin-top-10 margin-bot-20 hr-thin pad-bot-10 vr-thin">
+                    <Col md={2}><Button onClick={this.handleLoginLogout} className="badge-pill vr-thin" variant="outline-info">{this.state.buttonOneText}</Button></Col>
+                    <Col md={2}><Button onClick={this.handleSignupDelete} className="badge-pill vr-thin" variant="info">{this.state.buttonTwoText}</Button></Col>
                 </Row>
                 <Row>
                     <Col md={2} className="justify-content-md-left">
