@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Chirps from './Chirps';
+import PreloadedChirps from './PreloadedChirps';
 
 class ChirpPane extends Component {
     render() {
         return (
             <>
-                <Chirps />
+                <PreloadedChirps />
             </>
         );
     }

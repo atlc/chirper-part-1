@@ -8,7 +8,6 @@ import '../styles/helpers.css';
 class CreateChirp extends Component {
     constructor(props) {
         super(props);
-        let chirpTextArea;
         this.state = {
             chirpButtonText: 'Chirp',
             chirpText: ''
@@ -18,11 +17,10 @@ class CreateChirp extends Component {
 
     componentDidMount = () => this.chirpTextArea = document.getElementById('chirp-textarea');
 
-    taBlur = () => this.chirpTextArea.style=`background-color: rgba(255, 255, 255, 0.05) !important`;
-    taFocus = () => this.chirpTextArea.style=`background-color: rgba(255, 255, 255, 0.5) !important`;
+    handleTextAreaBlur = () => this.chirpTextArea.style=`background-color: rgba(255, 255, 255, 0.05) !important`;
     
-
-    // Todo - adjust box opacity onfocus/onblur
+    handleTextAreaFocus = () => this.chirpTextArea.style=`background-color: rgba(255, ${255-this.chirpTextArea.value.length}, ${255-this.chirpTextArea.value.length}, 0.5) !important`;
+    
     handleChirpTextUpdate = (newText) => {
         let chars = newText.target.value.length;
         this.chirpTextArea.style=`background-color: rgba(255, ${255-chars}, ${255-chars}, 0.5) !important`;
@@ -51,7 +49,7 @@ class CreateChirp extends Component {
                 <Row className="margin-top-5 margin-bot-10">
                     {chirpButtonAndIcon}
                     <Col>
-                        <textarea id="chirp-textarea" disabled={!this.props.MainBody.isLoggedIn} onChange={this.handleChirpTextUpdate} placeholder={`${this.props.MainBody.user ? "What's happening, " + this.props.MainBody.user + "?" : "Log in to tell us what's good in the world."}`} maxLength="280" className="opaque-white-bg pad-bot-20 text-white hr-thin vr-thin" rows="4" cols="50"></textarea>
+                        <textarea id="chirp-textarea" disabled={!this.props.MainBody.isLoggedIn} onChange={this.handleChirpTextUpdate} onFocus={this.handleTextAreaFocus} onBlur={this.handleTextAreaBlur} placeholder={`${this.props.MainBody.user ? "What's happening, " + this.props.MainBody.user + "?" : "Log in to tell us what's good in the world."}`} maxLength="280" className="opaque-white-bg pad-bot-20 text-white hr-thin vr-thin" rows="4" cols="50"></textarea>
                     </Col>
                 </Row>
                 <Row><Col><p className="hr-thicc"></p></Col></Row>
