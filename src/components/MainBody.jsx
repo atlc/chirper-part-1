@@ -6,7 +6,7 @@ class MainBody extends Component {
     render() {
         return (
             <React.Fragment>
-                <CreateChirp props={this.props} />
+                <CreateChirp mainBodyProps={this.props.appProps} />
                 <ChirpPane />
             </React.Fragment>
         );

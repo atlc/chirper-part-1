@@ -68,10 +68,10 @@ class App extends Component {
                 </Row>
                 <Row>
                     <Col md={2} className="justify-content-md-left">
-                        <LeftSidebar props={this.state} />
+                        <LeftSidebar appProps={this.state} />
                     </Col>
                     <Col md={7} className="justify-content-md-center text-center vr-thin">
-                        <MainBody props={this.state} />
+                        <MainBody appProps={this.state} />
                     </Col>
                     <Col md={3}>
                         <TrendsPane />
