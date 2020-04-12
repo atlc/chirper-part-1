@@ -1,5 +1,13 @@
 /* Custom classes */
 
+.bl-thin {
+    3px solid rgb(37, 51, 65) !important;
+}
+
+.br-thin {
+    3px solid rgb(37, 51, 65) !important;
+}
+
 .center-vert {
     vertical-align: middle;
 }
