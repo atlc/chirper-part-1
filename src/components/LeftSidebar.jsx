@@ -10,7 +10,7 @@ class LeftSidebar extends Component {
 
     render() {
         return (
-            <ul className="nav flex-column children-margin-vert-10">
+            <ul className="nav flex-column children-margin-vert-10 pad-bot-10 bl-thin hr-thin" style={{paddingLeft: 15+'px'}}>
                 <li className="nav-item">
                     <Button className="badge-pill" variant="info">
                         <img src={"https://image.flaticon.com/icons/png/128/92/92031.png"} height={32} width={32} alt="Icon of a raven" />
@@ -23,7 +23,7 @@ class LeftSidebar extends Component {
                     <Button className="badge-pill" variant="outline-info"href="https://twitter.com/explore"><img src={"https://cdn0.iconfinder.com/data/icons/huge-black-icons/512/Zoom_place.png"} height={32} width={32} alt="Icon of a house" /> Explore</Button>
                 </li>
                 <li className="nav-item">
-                    <Button className="badge-pill" variant="outline-info" href="https://twitter.com/notifications"><img src={"https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/003/037/original/notification.png?1572711433"} height={32} width={32} alt="Icon of a bell notification" /> Notifications</Button>
+                    <Button className="badge-pill" variant="outline-info" href="https://twitter.com/notifications"><img src={"https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/003/037/original/notification.png?1572711433"} height={30} width={30} alt="Icon of a bell notification" /> Updates</Button>
                 </li>
                 <li className="nav-item">
                     <Button className="badge-pill" variant="outline-info" href="https://twitter.com/messages"><img src={"https://cdn.iconscout.com/icon/free/png-512/message-537-461910.png"} height={32} width={32} alt="Icon of a message bubble" /> Messages</Button>

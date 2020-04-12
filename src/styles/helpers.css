@@ -1,11 +1,11 @@
 /* Custom classes */
 
 .bl-thin {
-    3px solid rgb(37, 51, 65) !important;
+    border-left: 3px solid rgb(37, 51, 65) !important;
 }
 
 .br-thin {
-    3px solid rgb(37, 51, 65) !important;
+    border-right: 3px solid rgb(37, 51, 65) !important;
 }
 
 .center-vert {
@@ -45,6 +45,10 @@
 
 .margin-bot-5 {
     margin-bottom: 5px;
+}
+
+.margin-sides-5 {
+    margin: 5px auto;
 }
 
 .margin-top-10 {

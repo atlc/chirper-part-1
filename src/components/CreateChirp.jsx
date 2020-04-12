@@ -6,14 +6,31 @@ import '../styles/helpers.css';
 
 
 class CreateChirp extends Component {
-    state = { chirpText: '' };
-
-    componentDidUpdate() {
-        // Add component for progress bar for character count/280
+    constructor(props) {
+        super(props);
+        let chirpTextArea;
+        this.state = {
+            chirpButtonText: 'Chirp',
+            chirpText: ''
+        };
     }
+    
 
+    componentDidMount = () => this.chirpTextArea = document.getElementById('chirp-textarea');
+
+    taBlur = () => this.chirpTextArea.style=`background-color: rgba(255, 255, 255, 0.05) !important`;
+    taFocus = () => this.chirpTextArea.style=`background-color: rgba(255, 255, 255, 0.5) !important`;
+    
+
+    // Todo - adjust box opacity onfocus/onblur
     handleChirpTextUpdate = (newText) => {
-        this.setState({chirpText: newText.target.value});
+        let chars = newText.target.value.length;
+        this.chirpTextArea.style=`background-color: rgba(255, ${255-chars}, ${255-chars}, 0.5) !important`;
+
+        this.setState({
+            chirpText: newText.target.value,
+            chirpButtonText: `Chirp (${chars}/280)`
+        });
     }
 
     render() {
@@ -22,7 +39,7 @@ class CreateChirp extends Component {
             chirpButtonAndIcon =
                 <Col>
                     <img className="bg-info" src={"https://image.flaticon.com/icons/png/128/92/92031.png"} height={64} width={64} alt="Icon of a raven" />
-                    <Button className="badge-pill w-100 margin-top-10" variant="info" href="https://twitter.com/compose/tweet">Chirp</Button>
+                    <Button className="badge-pill w-100 margin-top-10" variant="info" href="https://twitter.com/compose/tweet">{this.state.chirpButtonText}</Button>
                 </Col>
         }
 
