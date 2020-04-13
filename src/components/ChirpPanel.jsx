@@ -40,7 +40,7 @@ class ChirpPanel extends Component {
                 newChirps: [
                     <Chirp
                         id={`${Math.random().toString(36).substr(2, 16)}_${Date.now().toString(36)}`}
-                        avatar={'https://picsum.photos/128'}
+                        avatar={this.props.App.avatar}
                         firstName={'Cool Covalence Student:'}
                         lastName={this.props.App.user}
                         username={this.props.App.user}
@@ -56,22 +56,16 @@ class ChirpPanel extends Component {
     }
 
     render() {
-        let chirpButtonAndIcon;
-        if (this.props.App.isLoggedIn) {
-            chirpButtonAndIcon =
-                <Col>
-                    <img className="bg-info" src={"https://image.flaticon.com/icons/png/128/92/92031.png"} height={64} width={64} alt="Icon of a raven" />
-                    <Button className="badge-pill w-100 margin-top-10" variant="info" onClick={this.handleChirpButtonSubmitOnClick}>{this.state.chirpButtonText}</Button>
-                </Col>
-        }
-
         return (
             <>
                 <Row>
                     <Col><h1 className="text-center text-white hr-thin pad-bot-10">{this.props.App.isLoggedIn ? 'Home' : 'Trends Around The Globe'}</h1></Col>
                 </Row>
                 <Row className="margin-top-5 margin-bot-10">
-                    {chirpButtonAndIcon}
+                    <Col>
+                        <img className="bg-info img-round" src={this.props.App.isLoggedIn? 'https://picsum.photos/128' : "https://image.flaticon.com/icons/png/128/92/92031.png"} height={64} width={64} alt="Icon of a raven" />
+                        <Button disabled={!this.props.App.isLoggedIn} className="badge-pill w-100 margin-top-10" variant="info" onClick={this.handleChirpButtonSubmitOnClick}>{this.props.App.isLoggedIn ? this.state.chirpButtonText : 'Login to start using Chirper'}</Button>
+                    </Col>
                     <Col>
                         <textarea id="chirp-textarea" disabled={!this.props.App.isLoggedIn} onChange={this.handleChirpTextUpdate} onFocus={this.handleTextAreaFocus} onBlur={this.handleTextAreaBlur} placeholder={`${this.props.App.user ? "What's happening, @" + this.props.App.user + "?" : "Log in to tell us what's good in the world."}`} maxLength="280" className="opaque-white-bg pad-bot-20 text-white hr-thin vr-thin" rows="4" cols="50"></textarea>
                     </Col>

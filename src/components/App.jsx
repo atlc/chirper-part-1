@@ -19,7 +19,8 @@ class App extends Component {
             isLoggedIn: false,
             buttonOneText: 'Login',
             buttonTwoText: 'Sign up',
-            user: null
+            user: null,
+            avatar: null
         }
         this.initialState = this.state;
     }
@@ -49,6 +50,7 @@ class App extends Component {
             if (name) {
                 this.setState({user: name});
                 this.setState({
+                    avatar: 'https://picsum.photos/128',
                     isLoggedIn: true,
                     buttonOneText: 'Logout',
                     buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without a real account because this is using client-side validation!'
