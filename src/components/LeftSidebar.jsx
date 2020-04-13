@@ -9,7 +9,7 @@ class LeftSidebar extends Component {
             { label: "Explore", link: "https://www.google.com/search?tbm=isch&q=Explore", icon: "https://cdn0.iconfinder.com/data/icons/huge-black-icons/512/Zoom_place.png", alt: "Icon of a magnifying glass"},
             { label: "Updates", link: "https://www.google.com/search?tbm=isch&q=Updates", icon: "https://s3.amazonaws.com/iconbros/icons/icon_pngs/000/003/037/original/notification.png?1572711433", alt: "Icon of a notification bell"},
             { label: "Messages", link: "https://www.google.com/search?tbm=isch&q=Messages", icon: "https://cdn.iconscout.com/icon/free/png-512/message-537-461910.png", alt: "Icon of a message bubble"},
-            { label: "Bookmarks", link: "https://www.google.com/search?tbm=isch&q=Bookmarks", icon: "https://www.freeiconspng.com/uploads/bookmark-icon-1.png", alt: "Icon of a bookmark"},
+            { label: "Saved", link: "https://www.google.com/search?tbm=isch&q=Bookmarks", icon: "https://www.freeiconspng.com/uploads/bookmark-icon-1.png", alt: "Icon of a bookmark"},
             { label: "Lists", link: "https://www.google.com/search?tbm=isch&q=Lists", icon: "https://cdn.onlinewebfonts.com/svg/img_446233.png", alt: "Icon of a list"},
             { label: "Profile", link: "https://www.google.com/search?tbm=isch&q=Profile", icon: "https://i.ya-webdesign.com/images/profile-icon-png-9.png", alt: "Icon of a person's silhouette"}
         ]

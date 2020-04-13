@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Chirp from './Chirp';
 import '../styles/helpers.css';
-import PrerenderedChirps from './PrerenderedChirps';
+import FetchableChirps from './FetchableChirps';
 
 class ChirpPanel extends Component {
     constructor(props) {
@@ -39,7 +39,7 @@ class ChirpPanel extends Component {
                 chirpButtonText: 'Chirp',
                 newChirps: [
                     <Chirp
-                        id={`${Math.random().toString(36).substr(2, 16)}_${Date.now().toString(36)}`}
+                        key={`${Math.random().toString(36).substr(2, 16)}_${Date.now().toString(36)}`}
                         avatar={this.props.App.avatar}
                         firstName={'Cool Covalence Student:'}
                         lastName={this.props.App.user}
@@ -72,7 +72,7 @@ class ChirpPanel extends Component {
                 </Row>
                 <Row><Col><p className="hr-thicc"></p></Col></Row>
                 {this.state.newChirps}
-                <PrerenderedChirps />
+                <FetchableChirps />
             </>
         );
     }

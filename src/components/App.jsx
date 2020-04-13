@@ -48,12 +48,12 @@ class App extends Component {
                 }
             });
             if (name) {
-                this.setState({user: name});
                 this.setState({
+                    user: name,
                     avatar: 'https://picsum.photos/128',
                     isLoggedIn: true,
                     buttonOneText: 'Logout',
-                    buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without a real account because this is using client-side validation!'
+                    buttonTwoText: name ? `Delete @${name}` : 'Haxx, you logged in without a real account because this is using client-side validation!'
                 });
             }
         } else {
