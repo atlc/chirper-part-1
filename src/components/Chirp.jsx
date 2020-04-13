@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 class Chirp extends Component {
     render() {
@@ -18,7 +19,12 @@ class Chirp extends Component {
                         </Col>
                     </Card.Header>
                     <Card.Body>
-                            <div className="text-center text-white">{this.props.text}</div>
+                            <Row><div className="text-center text-white w-100 hr-thin pad-bot-10">{this.props.text}</div></Row>
+                            <Row className="margin-top-10">
+                                <Col><Button variant={"outline-info"}>Rechirp</Button></Col>
+                                <Col><Button variant={"outline-info"}>Bookmark</Button></Col>
+                                <Col><Button variant={"outline-info"}>Reply</Button></Col>
+                            </Row>
                     </Card.Body>
                 </Card>
             </Row>
