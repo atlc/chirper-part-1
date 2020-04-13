@@ -15,11 +15,7 @@ class LeftSidebar extends Component {
         ]
     }
 
-    focusToTextarea = () => {
-        if (this.props.App.isLoggedIn) {
-            document.getElementById('chirp-textarea').focus();
-        }
-    }
+    focusToTextarea = () => { if (this.props.App.isLoggedIn) document.getElementById('chirp-textarea').focus(); }
 
     render() {
         return (

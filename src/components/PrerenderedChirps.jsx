@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Chirp from './Chirp';
 
-
-class PreloadedChirps extends Component {
+class PrerenderedChirps extends Component {
     state = {
         users: [],
         quotes: []
@@ -18,15 +17,15 @@ class PreloadedChirps extends Component {
 
         await fetch("https://type.fit/api/quotes")
             .then(response => response.json())
-            .then(json => this.setState({quotes: json.splice(0,12)}))
+            .then(json => this.setState({quotes: json.splice(0,12)}));
     }
 
     render() {
         return (
             this.state.users.map((chirpData, i) => {
                 return (
-                    <Chirp 
-                        id={chirpData.id}
+                    <Chirp
+                        id={`${Math.random().toString(36).substr(2, 16)}_${Date.now().toString(36)}`}
                         avatar={chirpData.avatar}
                         firstName={chirpData.first_name}
                         lastName={chirpData.last_name}
@@ -42,4 +41,4 @@ class PreloadedChirps extends Component {
     }
 };
 
-export default PreloadedChirps;
+export default PrerenderedChirps;

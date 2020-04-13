@@ -4,16 +4,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 class Chirp extends Component {
-    /*
-        Pass in:
-            this.props.id?
-            this.props.avatar
-            this.props.first_name
-            this.props.last_name
-            this.props.username
-            this.props.chirpText
-    */
-
     render() {
         return (
             <Row key={this.props.id} className="justify-content-center margin-top-5 margin-bot-5">

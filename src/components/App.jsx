@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Swal from 'sweetalert2';
 import LeftSidebar from './LeftSidebar';
-import MainBody from './MainBody';
+import ChirpPanel from './ChirpPanel';
 import TrendsPane from './TrendsPane';
 import '../styles/helpers.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -51,7 +51,7 @@ class App extends Component {
                 this.setState({
                     isLoggedIn: true,
                     buttonOneText: 'Logout',
-                    buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without a real account!'
+                    buttonTwoText: this.state.user ? `Delete @${this.state.user}` : 'Haxx, you logged in without a real account because this is using client-side validation!'
                 });
             }
         } else {
@@ -71,7 +71,7 @@ class App extends Component {
                         <LeftSidebar App={this.state} />
                     </Col>
                     <Col md={7} className="justify-content-md-center text-center vr-thin">
-                        <MainBody App={this.state} />
+                        <ChirpPanel App={this.state} />
                     </Col>
                     <Col md={3}>
                         <TrendsPane />
