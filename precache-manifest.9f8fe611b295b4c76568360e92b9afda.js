@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2f48dadc9995506c733436beb4241423",
+    "revision": "1f41014534a3d57dc1ce298ca10f90f9",
     "url": "/chirper-part-1/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chirper-part-1/static/css/2.de424728.chunk.css"
   },
   {
-    "revision": "a2f3ac2f0b4a93cd6246",
+    "revision": "813123ae883de6662660",
     "url": "/chirper-part-1/static/css/main.30817e25.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chirper-part-1/static/js/2.a9d0f9c3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a2f3ac2f0b4a93cd6246",
-    "url": "/chirper-part-1/static/js/main.0df217dd.chunk.js"
+    "revision": "813123ae883de6662660",
+    "url": "/chirper-part-1/static/js/main.6338ddbf.chunk.js"
   },
   {
     "revision": "3d2e808e6067cb39462a",

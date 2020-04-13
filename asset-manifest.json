@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/chirper-part-1/static/css/main.30817e25.chunk.css",
-    "main.js": "/chirper-part-1/static/js/main.0df217dd.chunk.js",
-    "main.js.map": "/chirper-part-1/static/js/main.0df217dd.chunk.js.map",
+    "main.js": "/chirper-part-1/static/js/main.6338ddbf.chunk.js",
+    "main.js.map": "/chirper-part-1/static/js/main.6338ddbf.chunk.js.map",
     "runtime-main.js": "/chirper-part-1/static/js/runtime-main.b38daa3a.js",
     "runtime-main.js.map": "/chirper-part-1/static/js/runtime-main.b38daa3a.js.map",
     "static/css/2.de424728.chunk.css": "/chirper-part-1/static/css/2.de424728.chunk.css",
     "static/js/2.a9d0f9c3.chunk.js": "/chirper-part-1/static/js/2.a9d0f9c3.chunk.js",
     "static/js/2.a9d0f9c3.chunk.js.map": "/chirper-part-1/static/js/2.a9d0f9c3.chunk.js.map",
     "index.html": "/chirper-part-1/index.html",
-    "precache-manifest.55a884559004dda51c3f48e21331f4fd.js": "/chirper-part-1/precache-manifest.55a884559004dda51c3f48e21331f4fd.js",
+    "precache-manifest.9f8fe611b295b4c76568360e92b9afda.js": "/chirper-part-1/precache-manifest.9f8fe611b295b4c76568360e92b9afda.js",
     "service-worker.js": "/chirper-part-1/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/chirper-part-1/static/css/2.de424728.chunk.css.map",
     "static/css/main.30817e25.chunk.css.map": "/chirper-part-1/static/css/main.30817e25.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.de424728.chunk.css",
     "static/js/2.a9d0f9c3.chunk.js",
     "static/css/main.30817e25.chunk.css",
-    "static/js/main.0df217dd.chunk.js"
+    "static/js/main.6338ddbf.chunk.js"
   ]
 }
