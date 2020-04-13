@@ -38,13 +38,22 @@ class App extends Component {
             const { value: name } = await Swal.fire({
                 title: 'Input username',
                 html:
-                    '<input id="username-input" type="text" placeholder="Enter your username here">' +
-                    '<br /><br />' +
-                    '<input type="password" placeholder="Enter your password here">'
-                ,
+                `<form>
+                    <div class="form-group">
+                        <label for="username-input">Username</label>
+                        <input type="text" class="form-control" id="username-input" aria-describedby="username" placeholder="Enter your username here" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password-input">Password</label>
+                        <input type="password" class="form-control" id="password-input" aria-describedby="password-reqs" placeholder="Enter your password here" />
+                        <small id="password-reqs" class="form-text text-muted">
+                            Your password is not saved, submitted, has no length requirements, or character requirements. Hooray for empty client-side validation!
+                        </small>
+                    </div>
+                </form>`,
                 focusConfirm: false,
                 preConfirm: () => {
-                  return document.getElementById('username-input').value
+                  return document.getElementById('username-input').value.replace(/[^a-zA-Z0-9]/g, "").substring(0,15);
                 }
             });
             if (name) {
